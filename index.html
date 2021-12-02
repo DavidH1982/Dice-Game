@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dice Game</title>
+</head>
+<body>
+<div id="welcomePage">
+<div>
+    <h1>Dare to try the Cursed Dice Challenge?</h1>
+    <h2>Can you roll a total of 20?</h2>
+    <h2>Roll a 1 and you fail!!</h2>
+    <ul id="player1player2">
+    <li>
+        <div id="player1">
+            <p>1 Player</p>
+        </div>
+        <div>
+            <button id="player1EnterButton" class="enterButton">Enter</button>
+        </div>
+    </li>
+    <li>
+        <div id="player2">
+            <p>2 Player</p>
+        </div>
+        <div>
+            <button id="player2EnterButton" class="enterButton">Enter</button>
+        </div>
+    </li>
+</ul>
+</div>
+</div>
+
+<div id="player1screen">
+    <div id="gameArea">
+        <div id="dice">
+
+        </div>
+        <p>Running Total:</p>
+        <div id="accumulate">
+            0
+        </div>
+        <button id="button" class="button">Press to Roll</button>
+        <button id="restart" class="button">Restart</button>
+    </div>
+</div>
+    <script src="./script.js"></script>
+</body>
+</html>
