@@ -4,11 +4,16 @@ const accumulate = document.getElementById("accumulate");
 let totals = [];
 const dice = document.getElementById("dice");
 const enterButton = document.getElementById("player1EnterButton");
+const play2Button = document.getElementById("player2EnterButton");
 const welcome = document.getElementById("welcomePage");
 const play1screen = document.getElementById("player1screen");
+const play2screen = document.getElementById("player2screen");
+const play2Enter = document.getElementById("enterButton");
+const play2Intro = document.getElementById("play2intro");
 
 enterButton.addEventListener("click", () => {
   welcome.style.display = "none";
+  play2screen.style.display = "none";
   setTimeout(() => {
     play1screen.style.filter = "blur(7px)";
   }, 300);
@@ -19,7 +24,23 @@ enterButton.addEventListener("click", () => {
     play1screen.style.filter = "blur(0px)";
   }, 900);
 });
-
+play2Button.addEventListener("click", () => {
+  welcome.style.display = "none";
+  play1screen.style.display = "none";
+  play2Intro.style.display = "inline";
+});
+play2Enter.addEventListener("click", () => {
+  play2Intro.style.display = "none";
+  setTimeout(() => {
+    play2screen.style.filter = "blur(7px)";
+  }, 300);
+  setTimeout(() => {
+    play2screen.style.filter = "blur(3px";
+  }, 600);
+  setTimeout(() => {
+    play2screen.style.filter = "blur(0px)";
+  }, 900);
+});
 let reset = true;
 
 if ((reset = true)) {

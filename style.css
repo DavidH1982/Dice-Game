@@ -27,7 +27,7 @@ h2 {
   justify-content: space-around;
   list-style: none;
 }
-#player1player2 p{
+#player1player2 p {
   font-size: 28px;
 }
 .enterButton {
@@ -116,4 +116,36 @@ p {
   background-image: url(./images/dice6.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+#play2intro {
+  z-index: 10;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  text-align: center;
+  padding-top: 150px;
+  padding-right: 5%;
+  display: none;
+}
+#player2screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(10px);
+  background-image: url(./images/tent.png);
+  background-repeat: no-repeat;
+  background-size: 110vw;
+  background-position-x: -85px;
+  background-color: #333;
+  z-index: 0;
+}
+.button:hover,
+.enterButton:hover {
+  cursor: pointer;
 }
