@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Dice Game</title>
 </head>
@@ -40,24 +43,56 @@
 
         </div>
         <p>Running Total:</p>
-        <div id="accumulate">
+        <div id="accumulate" class="accumulator">
             0
         </div>
-        <button id="button" class="button">Press to Roll</button>
-        <button id="restart" class="button">Restart</button>
+        <button id="button" class="rollButton">Press to Roll</button>
+        <button id="restart" class="restartButton">Restart</button>
     </div>
 </div>
 <div id="play2intro">
-<h2>2 Player is a little different.</h2>
-<h2>Players take it in turns until they're not willing to go any further.</h2>
-<h2>A player can hold their score, at which point it becomes the other player's turn.</h2>
+<h2>2 player is a little different.</h2>
+<h2>Players keep rolling the dice until they dare not go any further.</h2>
+<h2>A player can then hold their score, at which point it becomes the other player's turn.</h2>
 
 <div>
     <button id="enterButton" class="enterButton">Enter</button>
 </div>
 </div>
 <div id="player2screen">
-
+    <ul id="splitScreen">
+        <li id="player1left">
+            <div id="player1gameArea">
+                <div id="player1dice">
+        
+                </div>
+                <p>Running Total:</p>
+                <div id="player1accumulate" class="accumulator">
+                    0
+                </div>
+                <button id="player1button" class="rollButton">Press to Roll</button>
+                <button id="player1hold" class="restartButton">Hold Score</button>
+            </div>
+        </li>
+        <li id="player2right">
+            <div id="player2gameArea">
+                <div id="player2dice">
+        
+                </div>
+                <p>Running Total:</p>
+                <div id="player2accumulate" class="accumulator">
+                    0
+                </div>
+                <button id="player2button" class="rollButton">Press to Roll</button>
+                <button id="player2hold" class="restartButton">Hold Score</button>
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="playAgainContainer">
+    <div id=playAgain> <p>Dare to play again?</p>
+        <button id="yes">Yes</button>
+    </div>
 </div>
     <script src="./script.js"></script>
 </body>

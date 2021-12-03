@@ -1,6 +1,5 @@
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Amatic SC", cursive;
   overflow: hidden;
 }
 #welcomePage {
@@ -16,10 +15,15 @@ body {
   padding-right: 5%;
 }
 h1 {
-  font-size: 42px;
+  font-size: 60px;
+  font-weight: 100;
+  margin-bottom: -40px;
+  margin-top: -40px;
 }
 h2 {
-  font-size: 32px;
+  font-size: 52px;
+  font-weight: 100;
+  margin-bottom: -50px;
 }
 #player1player2 {
   display: flex;
@@ -33,7 +37,8 @@ h2 {
 .enterButton {
   height: 100px;
   width: 150px;
-  font-size: 28px;
+  font-size: 38px;
+  font-family: "Amatic SC", cursive;
 }
 #player1screen {
   position: absolute;
@@ -61,8 +66,9 @@ h2 {
 p {
   color: white;
   padding: 0;
+  font-size: 20px;
 }
-#accumulate {
+.accumulator {
   box-sizing: border-box;
   padding-top: 30px;
   margin-top: -10px;
@@ -80,8 +86,12 @@ p {
   height: 25px;
   width: 100px;
   box-shadow: 5px 5px 2px #222;
+  font-family: "Amatic SC", cursive;
+  font-size: 38px;
 }
-#dice {
+#dice,
+#player1dice,
+#player2dice {
   height: 150px;
   width: 150px;
   margin-bottom: 30px;
@@ -127,9 +137,12 @@ p {
   width: 100vw;
   z-index: 99;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 80px;
   padding-right: 5%;
   display: none;
+}
+#enterButton {
+  margin-top: 80px;
 }
 #player2screen {
   position: absolute;
@@ -146,6 +159,89 @@ p {
   z-index: 0;
 }
 .button:hover,
-.enterButton:hover {
+.enterButton:hover,
+.rollButton:hover,
+.restartButton:hover {
   cursor: pointer;
+  background-color: lightgreen;
+}
+.rollButton:disabled:hover,
+.restartButton:disabled:hover {
+  background-color: grey;
+}
+#splitScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5%;
+  display: none;
+}
+#player1left {
+  width: 40%;
+  height: 80%;
+}
+#player2right {
+  width: 40%;
+  height: 80%;
+  margin-right: 5%;
+}
+#player1gameArea,
+#player2gameArea {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-top: -5%;
+}
+.rollButton,
+.restartButton {
+  margin-top: 20px;
+  font-family: "Amatic SC", cursive;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#playAgainContainer {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 50;
+  padding-top: 300px;
+  margin-left: -50px;
+  display: none;
+}
+#playAgain {
+  height: 200px;
+  width: 320px;
+  background-color: darkred;
+  text-align: center;
+}
+#playAgain p {
+  font-size: 40px;
+}
+#yes {
+  font-family: "Amatic SC", cursive;
+  width: 100px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#yes:hover {
+  cursor: pointer;
+  background-color: lightgreen;
 }
